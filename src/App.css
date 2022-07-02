@@ -1,38 +1,336 @@
-.App {
-  text-align: center;
-}
+/* Oswald Font  */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* Poppins Font  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* NavBar Starts */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar{
+  height: 80px;
+  background-color: #003580;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.navContainer{
+  width: 100%;
+  max-width: 1024px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo{
+  font-weight: 500;
+  font-family: 'Oswald', sans-serif;
+  font-size: 30px;
+  
+}
+.logoPart{
+  color: wheat;
+}
+
+.navButton{
+  margin-left: 20px;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  color: #003580;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  border-radius: 20px;
+}
+
+
+/* NavBar Ends */
+
+/* Mess Details Starts  */
+
+.messDetails{
+  font-family: 'Poppins', sans-serif;
+  background-color: antiquewhite;
+  padding: 20px;
+}
+
+.detailInfo{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
+  background-color: aliceblue;
+  box-shadow: 0px 0px 10px 2px rgb(73, 67, 67);
+  border-radius: 20px;
+}
+.detailName{
+  text-align: right;
+}
+
+.detailStat{
+  text-align: left;
+}
+/* Mess Details Ends  */
+
+/* Personal Info Starts  */
+
+.personalInfo{
+  background-color: #FAEBD7;
+  padding: 10px 0;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.infoDetail{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 30px 10px;
+  column-gap: 20px;
+}
+.infoDetailItem{
+  padding: 50px;
+  background-color: #F0F8FF;
+  box-shadow: 0px 0px 8px 2px rgb(73, 67, 67);
+  border-radius: 20px;
+}
+
+.infoIcon{
+  font-size: 30px;
+  color: #5d04ec;
+}
+.infoIcon2{
+  font-size: 30px;
+  color: #f02308;
+}
+.infoStat{
+  color: #003580;
+}
+.infoStat2{
+  color: #f02308;
+}
+.infoName{
+  color: gray;
+}
+/* Personal Info Ends  */
+
+/* All Member Info Starts  */
+
+.membersInfo{
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.memberBox{
+  
+  padding: 30px;
+  margin: 40px 40px;
+  text-align: center;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.527);
+  background-color: #F0F8FF;
+}
+
+.memberInfoDetail{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
+}
+.memberInfoName{
+  text-align: right;
+}
+.memberInfoStat{
+  text-align: left;
+}
+
+.memberButton{
+  background-color: rgb(13, 85, 194) !important;
+  border: none;
+  padding: 5px 10px;
+  margin-right: 10px;
+  border-radius: 10px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.memberName{
+  color: gray;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* All Member Info Ends  */
+
+/* Manager Part Start  */
+
+.managerNav{
+  margin-top: 20px;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.manNavButton{
+  margin: 20px 20px 0 20px;
+  padding: 10px 15px;
+  font-family: 'Poppins', sans-serif;
+  background-color: #003580;
+  border: 2px solid #003580;
+  color: white;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+
+}
+
+.manNavButton:hover{
+  border: 2px solid #003580;
+  background-color: transparent;
+  color: #003580;
+}
+
+/* Deposit Section  */
+.depositSec{
+  margin-top: 40px;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.depGrid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 20px;
+  box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.486);
+}
+
+.depInput{
+  align-items: center;
+  width: 50%;
+  margin: 10px auto;
+  border: 2px solid #003580;
+  background-color: rgba(207, 203, 198, 0.76);
+  border-radius: 10px;
+}
+
+.depButton{
+  width: 50%;
+  margin: 10px auto;
+  background-color: #003580;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  text-transform: capitalize;
+  border: none;
+  font-weight: bold;
+  
+}
+
+/* Meal Part  */
+.mealGrid{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin: 20px;
+  box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.486);
+}
+
+/* Manager Part End  */
+
+
+
+.login{
+  background-color: black;
+  padding-top: 50px;
+  min-height: 100vh;
+}
+.login label , .login h1{
+  color: white !important;
+  opacity: 0.6;
+}
+.login-form{
+  background-color: #1F1F1F;
+  width: 50%;
+  margin: auto;
+}
+.login-form input{
+  background-color: #333333 !important;
+  border : none !important;
+  color: white;
+  opacity: 0.5;
+  margin-bottom: 20px;
+}
+.login-logo{
+  position: absolute;
+  left:0;
+  right:10%;
+  top: 80%;
+  bottom: 50%;
+  transform: translateY(-50% , -50%);
+  font-size:45px;
+  opacity: 0.2 !important;
+}
+.register-logo{
+  position: absolute;
+  left:60%;
+  right:0;
+  top: 85%;
+  bottom: 50%;
+  transform: translateY(-50% , -50%);
+  font-size:45px;
+  opacity: 0.2 !important;
+}
+.login a{
+  color: white !important;
+  opacity: 0.5;
+}
+.btn1{
+  background-color : black !important;
+  color: white !important;
+  padding: 5px 15px !important;
+  outline: none !important;
+  border-radius: 10px;
+  box-shadow: 0 0 2px 2px rgb(77, 67, 67) !important;
+  transition: all 0.5s ease;
+}
+.btn1:hover{
+  color: black !important;
+  background-color: white !important;
+
+}
+
+.inputText{
+  padding: 20px;
+  font-size: 30px;
+}
+
+
+/* Responsive  */
+
+@media only screen and (max-width: 768px) {
+  .infoDetail{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 30px 10px;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+.detailNameItem, .detailStatItem {
+  font-size: 17px;
+}
+.memberNameItem, .memberStatItem{
+  font-size: 15px;
+}
+
+.logo{
+  font-size: 20px;
+}
+
+.navButton{
+  font-size: 14px;
+  padding: 5px 10px;
+  margin-left: 10px;
+}
+.infoDetailItem{
+  padding: 25px;
+}
+.login{
+  background-color: black;
+  padding: 50px 60px;
+  min-height: 100vh;
+}
+.inputText{
+  padding: 15px;
+  font-size: 30px;
+}
 }
