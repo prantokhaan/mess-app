@@ -20,7 +20,7 @@ const Register = () => {
     return (
       <div className="login text-center">
         {loading && <Spinner />}
-        <div>
+        <div className='login-inside'>
           <Form
             layout="vertical"
             className="login-form p-5"

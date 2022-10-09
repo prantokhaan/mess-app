@@ -33,12 +33,29 @@ const AddMeal = () => {
 
     
 
-    function onFinish(values) {
+    function oneMeal(values) {
+      values._id = members._id;
+      values.meal = members.meal + 1;
+
+      dispatch(editMember(values));
+      console.log(values);
+    }
+    function twoMeal(values) {
+      values._id = members._id;
+      values.meal = members.meal + 2;
+
+      dispatch(editMember(values));
+      console.log(values);
+    }
+    function customMeal(values) {
       values._id = members._id;
 
       dispatch(editMember(values));
       console.log(values);
     }
+
+    let time = new Date();
+    console.log(time);
 
     
     
@@ -55,15 +72,95 @@ const AddMeal = () => {
                     initialValues={members}
                     className="bs1 p-2"
                     layout="vertical"
-                    onFinish={onFinish}
+                    onFinish={oneMeal}
                   >
-                    <h3>Edit Meal</h3>
+                    <h3>Edit Meal of <span className='text-capitalize'>{members.name}</span></h3>
+                    <h4>Now Meal: {members.meal}</h4>
 
                     <hr />
 
                     <Form.Item
                       name="meal"
-                      label="Update Meal"
+                      label=""
+                      type="Number"
+                      rules={[{ required: true }]}
+                      className="inputForm d-hidden"
+                      // initialValue={oldMeal}
+                    >
+                      <Input type="number" className="inputText d-none disabled" />
+                    </Form.Item>
+                    <Form.Item
+                      name="name"
+                      label=""
+                      className="d-hidden"
+                      rules={[{ required: true }]}
+                    >
+                      <Input disabled className="d-none" />
+                    </Form.Item>
+                    <Form.Item
+                      name="deposit"
+                      label=""
+                      type="Number"
+                      className="d-hidden"
+                      rules={[{ required: true }]}
+                    >
+                      <Input type="number" disabled className="d-none" />
+                    </Form.Item>
+
+                    <div className="text-right">
+                      <button className="btn1 mt-2">Add One Meal</button>
+                    </div>
+                  </Form>
+                  <Form
+                    initialValues={members}
+                    className="bs1 p-2"
+                    layout="vertical"
+                    onFinish={twoMeal}
+                  >
+
+                    <Form.Item
+                      name="meal"
+                      label=""
+                      type="Number"
+                      rules={[{ required: true }]}
+                      className="inputForm d-hidden"
+                      // initialValue={oldMeal}
+                    >
+                      <Input type="number" className="inputText d-none disabled" />
+                    </Form.Item>
+                    <Form.Item
+                      name="name"
+                      label=""
+                      className="d-hidden"
+                      rules={[{ required: true }]}
+                    >
+                      <Input disabled className="d-none" />
+                    </Form.Item>
+                    <Form.Item
+                      name="deposit"
+                      label=""
+                      type="Number"
+                      className="d-hidden"
+                      rules={[{ required: true }]}
+                    >
+                      <Input type="number" disabled className="d-none" />
+                    </Form.Item>
+
+                    <div className="text-right">
+                      <button className="btn1 mt-2">Add Two Meal</button>
+                    </div>
+                  </Form>
+                  <Form
+                    initialValues={members}
+                    className="bs1 p-2"
+                    layout="vertical"
+                    onFinish={customMeal}
+                  >
+                    
+
+                    <Form.Item
+                      name="meal"
+                      label="Enter Meal Quantity"
                       type="Number"
                       rules={[{ required: true }]}
                       className="inputForm"
@@ -83,13 +180,14 @@ const AddMeal = () => {
                       name="deposit"
                       label=""
                       type="Number"
+                      className="d-hidden"
                       rules={[{ required: true }]}
                     >
                       <Input type="number" disabled className="d-none" />
                     </Form.Item>
 
                     <div className="text-right">
-                      <button className="btn1 mt-2">Update</button>
+                      <button className="btn1 mt-2">Add Custom Meal</button>
                     </div>
                   </Form>
                 </div>

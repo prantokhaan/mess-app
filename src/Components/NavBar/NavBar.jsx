@@ -16,10 +16,10 @@ const NavBar = () => {
             {user ? (
               <>
                 <Link
-                  to="/login"
+                  to="/myProfile"
                   style={{ color: "inherit", textDecoration: "none" }}
                 >
-                  <button className="navButton">{user.username}</button>
+                  <button className="navButton text-uppercase">{user.username}</button>
                 </Link>
                 <button
                   className="navButton"

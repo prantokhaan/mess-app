@@ -6,7 +6,7 @@ export const getAllDeposits = () => async (dispatch) => {
 
   try {
     const response = await axios.get(
-      "https://nameless-brushlands-63817.herokuapp.com/deposit/getAllDeposits"
+      "https://mess-server.cyclic.app/deposit/getAllDeposits"
     );
     dispatch({ type: "GET_ALL_DEPOSITS", payload: response.data });
     dispatch({ type: "LOADING", payload: false });
@@ -21,7 +21,7 @@ export const addDeposit = (reqObj) => async (dispatch) => {
 
   try {
     await axios.post(
-      "https://nameless-brushlands-63817.herokuapp.com/deposit/addDeposit",
+      "https://mess-server.cyclic.app/deposit/addDeposit",
       reqObj
     );
 
@@ -41,7 +41,7 @@ export const editDeposit = (reqObj) => async (dispatch) => {
 
   try {
     await axios.post(
-      "https://nameless-brushlands-63817.herokuapp.com/deposit/editDeposit",
+      "https://mess-server.cyclic.app/deposit/editDeposit",
       reqObj
     );
 

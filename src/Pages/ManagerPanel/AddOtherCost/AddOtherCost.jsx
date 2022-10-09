@@ -48,6 +48,13 @@ const AddOtherCost = () => {
               >
                 <Input className="px-4 py-2 mb-2" />
               </Form.Item>
+              <Form.Item
+                name="person"
+                label="Who did the Cost?"
+                rules={[{ required: true }]}
+              >
+                <Input className="px-4 py-2 mb-2" />
+              </Form.Item>
 
               <div className="text-right mt-2">
                 <button className="btn1">ADD OTHER COST</button>

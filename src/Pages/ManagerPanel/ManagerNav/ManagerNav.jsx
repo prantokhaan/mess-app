@@ -5,24 +5,34 @@ import useMember from '../../../Hooks/useMember';
 const ManagerNav = () => {
     const [member] = useMember();
     const user = JSON.parse(localStorage.getItem("user"));
-    console.log(member.name)
     return (
       <div style={{ textAlign: "center" }} className="managerNav">
         <div className="manNavList">
-          
           <Link to="/cost" style={{ textDecoration: "none" }}>
             <button className="manNavButton">Add Meal Cost</button>
           </Link>
           <Link to="/otherCost" style={{ textDecoration: "none" }}>
             <button className="manNavButton">Add Other Cost</button>
           </Link>
-          {user.role === "manager" ? (
-            <Link to="/addMember" style={{ textDecoration: "none" }}>
-            <button className="manNavButton">Add Member</button>
+          <br />
+          <Link to="/bazarHistory" style={{ textDecoration: "none" }}>
+            <button className="manNavButton">Bazar History</button>
           </Link>
-          ) : <div></div>}
-
-         
+          <Link to="/showBazarDates" style={{ textDecoration: "none" }}>
+            <button className="manNavButton">Show Bazar Dates</button>
+          </Link>
+          {user.role === "manager" ? (
+            <>
+              <Link to="/addMember" style={{ textDecoration: "none" }}>
+                <button className="manNavButton">Add Member</button>
+              </Link>
+              <Link to="/bazarDates" style={{ textDecoration: "none" }}>
+                <button className="manNavButton">Add Date of Bazar</button>
+              </Link>
+            </>
+          ) : (
+            <div></div>
+          )}
         </div>
       </div>
     );

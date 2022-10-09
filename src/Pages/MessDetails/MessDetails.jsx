@@ -23,7 +23,7 @@ const MessDetails = (props) => {
             <h4 className="detailNameItem">Total Meal Cost - </h4>
             <h4 className="detailNameItem">Meal Rate - </h4>
             <h4 className="detailNameItem">Total Other Cost - </h4>
-            <h4 className="detailNameItem">Other Cost Person - </h4>
+            <h4 className="detailNameItem detailNameItemExtra">Other Cost Person - </h4>
           </div>
           <div className="detailStat">
             <h4 className="detailStatItem">{messBalance} tk</h4>

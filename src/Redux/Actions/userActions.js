@@ -6,7 +6,7 @@ export const userLogin = (reqObj) => async (dispatch) => {
 
   try {
     const response = await axios.post(
-      "https://nameless-brushlands-63817.herokuapp.com/users/login",
+      "https://mess-server.cyclic.app/users/login",
       reqObj
     );
     localStorage.setItem("user", JSON.stringify(response.data));
@@ -32,7 +32,7 @@ export const userRegister = (reqObj) => async (dispatch) => {
 
   try {
     const response = await axios.post(
-      "https://nameless-brushlands-63817.herokuapp.com/users/register",
+      "https://mess-server.cyclic.app/users/register",
       reqObj
     );
     message.success("Registration successfull")

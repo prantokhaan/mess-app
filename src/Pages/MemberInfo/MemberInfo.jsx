@@ -38,7 +38,7 @@ console.log(values);
     }
     return (
       <div className="memberBox">
-        <h2 className="memberName">{name}'s Info</h2>
+        <h2 className="memberName text-capitalize">{name}'s Info</h2>
         <hr className="w-50 mx-auto" />
         <div className="memberInfoDetail">
           <div className="memberInfoName">
@@ -63,7 +63,7 @@ console.log(values);
               <button className="memberButton">Add Meal</button>
             </Link>
             <Link to={`addDeposit/${_id}`}>
-              <button className="memberButton">Add Deposit</button>
+              <button className="memberButton mt-2">Add Deposit</button>
             </Link>
           </div>
         ) : (

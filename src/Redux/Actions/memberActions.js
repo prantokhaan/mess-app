@@ -6,7 +6,7 @@ export const getAllMembers = () => async (dispatch) => {
 
   try {
     const response = await axios.get(
-      "https://nameless-brushlands-63817.herokuapp.com/member/getAllMembers"
+      "https://mess-server.cyclic.app/member/getAllMembers"
     );
     dispatch({ type: "GET_ALL_MEMBERS", payload: response.data });
     dispatch({ type: "LOADING", payload: false });
@@ -20,10 +20,7 @@ export const addMember = (reqObj) => async (dispatch) => {
   dispatch({ type: "LOADING", payload: true });
 
   try {
-    await axios.post(
-      "https://nameless-brushlands-63817.herokuapp.com/member/addMember",
-      reqObj
-    );
+    await axios.post("https://mess-server.cyclic.app/member/addMember", reqObj);
 
     dispatch({ type: "LOADING", payload: false });
     message.success("New Member added successfully");
@@ -41,7 +38,7 @@ export const editMember = (reqObj) => async (dispatch) => {
 
   try {
     await axios.post(
-      "https://nameless-brushlands-63817.herokuapp.com/member/editMember",
+      "https://mess-server.cyclic.app/member/editMember",
       reqObj
     );
 
@@ -61,7 +58,7 @@ export const deleteMember = (reqObj) => async (dispatch) => {
 
   try {
     await axios.post(
-      "https://nameless-brushlands-63817.herokuapp.com/member/deleteMember",
+      "https://mess-server.cyclic.app/member/deleteMember",
       reqObj
     );
 

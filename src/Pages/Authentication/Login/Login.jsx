@@ -17,11 +17,11 @@ const Login = () => {
     return (
       <div className="login text-center">
         {loading && <Spinner />}
-        <div>
+        <div className="login-inside">
           <Form
             layout="vertical"
             className="login-form p-5"
-              onFinish={onFinish}
+            onFinish={onFinish}
           >
             <h1>Login</h1>
             <hr />
@@ -44,7 +44,7 @@ const Login = () => {
 
             <hr />
 
-            <Link to="/register">Click Here to Register</Link>
+            {/* <Link to="/register">Click Here to Register</Link> */}
           </Form>
         </div>
       </div>

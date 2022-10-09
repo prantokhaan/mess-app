@@ -31,7 +31,8 @@ const AllMemberInfo = (props) => {
           <h4>Total Member: {totalMember.length}</h4>
         </div>
         <div className="memberInfoContainer">
-          {totalMember.map((mem) => (
+          
+          {totalMember.sort((a, b)=> (a.meal < b.meal) ? 1 : -1).map((mem) => (
             <MemberInfo
               key={mem._id}
               member={mem}

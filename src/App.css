@@ -50,7 +50,7 @@
 
 .messDetails{
   font-family: 'Poppins', sans-serif;
-  background-color: antiquewhite;
+  background-color: #d8f3dc;
   padding: 20px;
 }
 
@@ -58,7 +58,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 20px;
-  background-color: aliceblue;
+  background-color: #c7f9cc;
   box-shadow: 0px 0px 10px 2px rgb(73, 67, 67);
   border-radius: 20px;
 }
@@ -74,7 +74,7 @@
 /* Personal Info Starts  */
 
 .personalInfo{
-  background-color: #FAEBD7;
+  background-color: #d8f3dc;
   padding: 10px 0;
   font-family: 'Poppins', sans-serif;
 
@@ -88,14 +88,14 @@
 }
 .infoDetailItem{
   padding: 50px;
-  background-color: #F0F8FF;
+  background-color: #c7f9cc;
   box-shadow: 0px 0px 8px 2px rgb(73, 67, 67);
   border-radius: 20px;
 }
 
 .infoIcon{
   font-size: 30px;
-  color: #5d04ec;
+  color: #003580;
 }
 .infoIcon2{
   font-size: 30px;
@@ -117,6 +117,7 @@
 .membersInfo{
   text-align: center;
   font-family: 'Poppins', sans-serif;
+  background-color: #d8f3dc;
 
 }
 
@@ -126,7 +127,8 @@
   margin: 40px 40px;
   text-align: center;
   box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.527);
-  background-color: #F0F8FF;
+  background-color: #c7f9cc;
+  border-radius: 20px;
 }
 
 .memberInfoDetail{
@@ -143,11 +145,20 @@
 
 .memberButton{
   background-color: rgb(13, 85, 194) !important;
-  border: none;
+  border: 2px solid rgb(13, 85, 194);
   padding: 5px 10px;
-  margin-right: 10px;
+  margin-right: 15px;
   border-radius: 10px;
   color: white;
+  transition: all 0.5s ease;
+}
+.memberButton:hover{
+  background-color: transparent !important;
+  border: 2px solid rgb(13, 85, 194);
+  padding: 5px 10px;
+  margin-right: 15px;
+  border-radius: 10px;
+  color: rgb(13, 85, 194);
 }
 
 .memberName{
@@ -292,8 +303,43 @@
 .inputText{
   padding: 20px;
   font-size: 30px;
+  width: 70%;
+  background-color: aliceblue;
 }
 
+/* Cost  */
+
+.costHistory{
+  background-color: #131001;
+  box-shadow: 0px 0px 8px 2px rgb(73, 67, 67);
+  border-radius: 20px;
+  padding: 15px;
+  color: white;
+}
+
+.delButton{
+  background-color : orange !important;
+  color: black !important;
+  padding: 5px 15px !important;
+  outline: none !important;
+  border-radius: 10px;
+  box-shadow: 0 0 2px 2px rgb(77, 67, 67) !important;
+  transition: all 0.5s ease;
+  font-weight: bold;
+}
+.delButton:hover{
+  color: black !important;
+  background-color: white !important;
+}
+
+/* Bazar Dates  */
+.bazarHistory{
+  background-color: #023047;
+  box-shadow: 0px 0px 8px 2px rgb(73, 67, 67);
+  border-radius: 20px;
+  padding: 15px;
+  color: white;
+}
 
 /* Responsive  */
 
@@ -306,10 +352,13 @@
   row-gap: 20px;
 }
 .detailNameItem, .detailStatItem {
-  font-size: 17px;
+  font-size: 14px;
+}
+.detailNameItemExtra{
+  font-size: 12px;
 }
 .memberNameItem, .memberStatItem{
-  font-size: 15px;
+  font-size: 12px;
 }
 
 .logo{
@@ -326,11 +375,16 @@
 }
 .login{
   background-color: black;
-  padding: 50px 60px;
-  min-height: 100vh;
+  width: 100%;
+  padding: -100px;
 }
 .inputText{
   padding: 15px;
   font-size: 30px;
+}
+.login-form{
+  background-color: #1F1F1F;
+  width: 100%;
+  margin: auto;
 }
 }

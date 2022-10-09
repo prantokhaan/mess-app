@@ -16,6 +16,10 @@ import EditDeposit from './Pages/MessDetails/EditDeposit';
 import AllDeposit from './Pages/MessDetails/AllDeposit';
 import AddUser from './Pages/ManagerPanel/AddUser/AddUser';
 import AddDepositM from './Pages/ManagerPanel/AddDeposit/AddDepositM';
+import BazarHistory from './Pages/ManagerPanel/BazarHistory/BazarHistory';
+import Profile from './Pages/Profile/Profile';
+import AddBazarDate from './Pages/ManagerPanel/AddBazarDate/AddBazarDate';
+import ShowBazarDates from './Pages/ManagerPanel/ShowBazarDates/ShowBazarDates';
 
 function App() {
   return (
@@ -37,6 +41,22 @@ function App() {
             element={
               <PrivateRoute>
                 <ManagerPanel />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/myProfile"
+            element={
+              <PrivateRoute>
+                <Profile />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/showBazarDates"
+            element={
+              <PrivateRoute>
+                <ShowBazarDates />
               </PrivateRoute>
             }
           />
@@ -73,11 +93,29 @@ function App() {
             }
           />
           <Route
+            path="/bazarHistory"
+            element={
+              <PrivateRoute>
+                <BazarHistory />
+              </PrivateRoute>
+            }
+          />
+          <Route
             path="/addMember"
             element={
               <PrivateRoute>
                 <ManagerRoute>
                   <AddUser />
+                </ManagerRoute>
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/bazarDates"
+            element={
+              <PrivateRoute>
+                <ManagerRoute>
+                  <AddBazarDate />
                 </ManagerRoute>
               </PrivateRoute>
             }

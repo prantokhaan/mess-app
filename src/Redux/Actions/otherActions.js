@@ -6,7 +6,7 @@ export const getAllOthers = () => async (dispatch) => {
 
   try {
     const response = await axios.get(
-      "https://nameless-brushlands-63817.herokuapp.com/other/getAllOthers"
+      "https://mess-server.cyclic.app/other/getAllOthers"
     );
     dispatch({ type: "GET_ALL_OTHERS", payload: response.data });
     dispatch({ type: "LOADING", payload: false });
@@ -20,10 +20,7 @@ export const addOther = (reqObj) => async (dispatch) => {
   dispatch({ type: "LOADING", payload: true });
 
   try {
-    await axios.post(
-      "https://nameless-brushlands-63817.herokuapp.com/other/addOther",
-      reqObj
-    );
+    await axios.post("https://mess-server.cyclic.app/other/addOther", reqObj);
 
     dispatch({ type: "LOADING", payload: false });
     message.success("Other Cost added successfully");
@@ -40,10 +37,7 @@ export const editOther = (reqObj) => async (dispatch) => {
   dispatch({ type: "LOADING", payload: true });
 
   try {
-    await axios.post(
-      "https://nameless-brushlands-63817.herokuapp.com/other/editOther",
-      reqObj
-    );
+    await axios.post("https://mess-server.cyclic.app/other/editOther", reqObj);
 
     dispatch({ type: "LOADING", payload: false });
     message.success("Other Cost Updated successfully");
@@ -61,7 +55,7 @@ export const deleteOther = (reqObj) => async (dispatch) => {
 
   try {
     await axios.post(
-      "https://nameless-brushlands-63817.herokuapp.com/other/deleteOther",
+      "https://mess-server.cyclic.app/other/deleteOther",
       reqObj
     );
 

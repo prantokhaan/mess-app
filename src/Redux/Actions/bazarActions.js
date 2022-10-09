@@ -1,14 +1,14 @@
 import { message } from "antd";
 import axios from "axios";
 
-export const getAllCosts = () => async (dispatch) => {
+export const getAllBazars = () => async (dispatch) => {
   dispatch({ type: "LOADING", payload: true });
 
   try {
     const response = await axios.get(
-      "https://mess-server.cyclic.app/cost/getAllCosts"
+      "https://mess-server.cyclic.app/bazar/getAllBazars"
     );
-    dispatch({ type: "GET_ALL_COSTS", payload: response.data });
+    dispatch({ type: "GET_ALL_BAZARS", payload: response.data });
     dispatch({ type: "LOADING", payload: false });
   } catch (error) {
     console.log(error);
@@ -16,14 +16,14 @@ export const getAllCosts = () => async (dispatch) => {
   }
 };
 
-export const addCost = (reqObj) => async (dispatch) => {
+export const addBazar = (reqObj) => async (dispatch) => {
   dispatch({ type: "LOADING", payload: true });
 
   try {
-    await axios.post("https://mess-server.cyclic.app/cost/addCost", reqObj);
+    await axios.post("https://mess-server.cyclic.app/bazar/addBazar", reqObj);
 
     dispatch({ type: "LOADING", payload: false });
-    message.success("New Meal Cost added successfully");
+    message.success("New Bazar Date added successfully");
     setTimeout(() => {
       window.location.href = "/";
     }, 500);
@@ -33,14 +33,14 @@ export const addCost = (reqObj) => async (dispatch) => {
   }
 };
 
-export const editCost = (reqObj) => async (dispatch) => {
+export const editBazar = (reqObj) => async (dispatch) => {
   dispatch({ type: "LOADING", payload: true });
 
   try {
-    await axios.post("https://mess-server.cyclic.app/cost/editCost", reqObj);
+    await axios.post("https://mess-server.cyclic.app/bazar/editBazar", reqObj);
 
     dispatch({ type: "LOADING", payload: false });
-    message.success("Meal Cost Updated successfully");
+    message.success("Bazar Date Updated successfully");
     setTimeout(() => {
       window.location.href = "/";
     }, 500);
@@ -50,14 +50,14 @@ export const editCost = (reqObj) => async (dispatch) => {
   }
 };
 
-export const deleteCost = (reqObj) => async (dispatch) => {
+export const deleteBazar = (reqObj) => async (dispatch) => {
   dispatch({ type: "LOADING", payload: true });
 
   try {
-    await axios.post("https://mess-server.cyclic.app/cost/deleteCost", reqObj);
+    await axios.post("https://mess-server.cyclic.app/bazar/deleteBazar", reqObj);
 
     dispatch({ type: "LOADING", payload: false });
-    message.success("Meal Cost deleted successfully");
+    message.success("Bazar Date deleted successfully");
     setTimeout(() => {
       window.location.reload();
     }, 500);
