@@ -1,14 +1,14 @@
 import { message } from "antd";
 import axios from "axios";
 
-export const getAllMembers = () => async (dispatch) => {
+export const getAllNots = () => async (dispatch) => {
   dispatch({ type: "LOADING", payload: true });
 
   try {
     const response = await axios.get(
-      "https://mess-server.cyclic.app/member/getAllMembers"
+      "https://mess-server.cyclic.app/not/getAllNots"
     );
-    dispatch({ type: "GET_ALL_MEMBERS", payload: response.data });
+    dispatch({ type: "GET_ALL_NOTS", payload: response.data });
     dispatch({ type: "LOADING", payload: false });
   } catch (error) {
     console.log(error);
@@ -16,16 +16,16 @@ export const getAllMembers = () => async (dispatch) => {
   }
 };
 
-export const addMember = (reqObj) => async (dispatch) => {
+export const addNot = (reqObj) => async (dispatch) => {
   dispatch({ type: "LOADING", payload: true });
 
   try {
-    await axios.post("https://mess-server.cyclic.app/member/addMember", reqObj);
+    await axios.post("https://mess-server.cyclic.app/not/addNot", reqObj);
 
     dispatch({ type: "LOADING", payload: false });
-    message.success("New Member added successfully");
+    message.success("New Notification added successfully");
     setTimeout(() => {
-      window.location.href = "/addMember";
+      window.location.href = "/";
     }, 500);
   } catch (error) {
     console.log(error);
@@ -33,19 +33,16 @@ export const addMember = (reqObj) => async (dispatch) => {
   }
 };
 
-export const editMember = (reqObj) => async (dispatch) => {
+export const editNot = (reqObj) => async (dispatch) => {
   dispatch({ type: "LOADING", payload: true });
 
   try {
-    await axios.post(
-      "https://mess-server.cyclic.app/member/editMember",
-      reqObj
-    );
+    await axios.post("https://mess-server.cyclic.app/not/editNot", reqObj);
 
     dispatch({ type: "LOADING", payload: false });
-    message.success("Updated successfully");
+    message.success("Notification Updated successfully");
     setTimeout(() => {
-      window.location.reload();
+      window.location.href = "/";
     }, 500);
   } catch (error) {
     console.log(error);
@@ -53,17 +50,17 @@ export const editMember = (reqObj) => async (dispatch) => {
   }
 };
 
-export const deleteMember = (reqObj) => async (dispatch) => {
+export const deleteNot = (reqObj) => async (dispatch) => {
   dispatch({ type: "LOADING", payload: true });
 
   try {
     await axios.post(
-      "https://mess-server.cyclic.app/member/deleteMember",
+      "https://mess-server.cyclic.app/not/deleteNot",
       reqObj
     );
 
     dispatch({ type: "LOADING", payload: false });
-    message.success("Member deleted successfully");
+    message.success("Notification deleted successfully");
     setTimeout(() => {
       window.location.reload();
     }, 500);

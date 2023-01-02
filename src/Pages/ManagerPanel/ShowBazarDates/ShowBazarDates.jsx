@@ -20,6 +20,8 @@ const ShowBazarDates = () => {
     React.useEffect(() => {
       setBazars(bazar);
     }, [bazar]);
+
+    
     return (
       <div>
         <NavBar />

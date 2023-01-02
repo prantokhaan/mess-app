@@ -8,7 +8,7 @@
 
 .navbar{
   height: 80px;
-  background-color: #003580;
+  background-color: #001d3d;
   display: flex;
   justify-content: center;
 }
@@ -50,7 +50,7 @@
 
 .messDetails{
   font-family: 'Poppins', sans-serif;
-  background-color: #d8f3dc;
+  background-color: white;
   padding: 20px;
 }
 
@@ -58,8 +58,9 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 20px;
-  background-color: #c7f9cc;
-  box-shadow: 0px 0px 10px 2px rgb(73, 67, 67);
+background: #ffffff;
+box-shadow: inset 5px 5px 23px #666666,
+            inset -5px -5px 23px #ffffff;
   border-radius: 20px;
 }
 .detailName{
@@ -74,9 +75,12 @@
 /* Personal Info Starts  */
 
 .personalInfo{
-  background-color: #d8f3dc;
+  background-color: #ffffff;
   padding: 10px 0;
   font-family: 'Poppins', sans-serif;
+  color: black;
+  box-shadow: 20px 20px 60px #d9d9d9,
+             -20px -20px 60px #ffffff;
 
 }
 
@@ -88,21 +92,29 @@
 }
 .infoDetailItem{
   padding: 50px;
-  background-color: #c7f9cc;
-  box-shadow: 0px 0px 8px 2px rgb(73, 67, 67);
+  background-color: #ffffff;
+  box-shadow: inset 5px 5px 10px #666666,
+            inset -5px -5px 10px #ffffff;
+  border-radius: 20px;
+}
+.infoDetailItem2{
+  padding: 50px;
+  background-color: #ffffff;
+  box-shadow: inset 5px 5px 10px #666666,
+            inset -5px -5px 10px #ffffff;
   border-radius: 20px;
 }
 
 .infoIcon{
   font-size: 30px;
-  color: #003580;
+  color: #82038d;
 }
 .infoIcon2{
   font-size: 30px;
   color: #f02308;
 }
 .infoStat{
-  color: #003580;
+  color: #02285e;
 }
 .infoStat2{
   color: #f02308;
@@ -117,7 +129,8 @@
 .membersInfo{
   text-align: center;
   font-family: 'Poppins', sans-serif;
-  background-color: #d8f3dc;
+  background-color: #ffffff;
+  padding: 20px 0;
 
 }
 
@@ -126,8 +139,9 @@
   padding: 30px;
   margin: 40px 40px;
   text-align: center;
-  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.527);
-  background-color: #c7f9cc;
+  box-shadow: inset 5px 5px 10px #666666,
+            inset -5px -5px 10px #ffffff;
+  background-color: #ffffff;
   border-radius: 20px;
 }
 

@@ -7,6 +7,8 @@ import { memberReducer } from "./Reducers/memberReducer";
 import { costReducer } from "./Reducers/costReducer";
 import { otherReducer } from "./Reducers/otherReducer";
 import { bazarReducer } from "./Reducers/bazarReducer";
+import { notReducer } from "./Reducers/notReducer";
+import { userReducer } from "./Reducers/userReducer";
 
 const composeEnhancers = composeWithDevTools({});
 
@@ -17,7 +19,9 @@ const rootReducer = combineReducers({
   memberReducer,
   costReducer,
   otherReducer,
-  bazarReducer
+  bazarReducer,
+  notReducer,
+  userReducer,
 });
 
 const store = createStore(

@@ -20,8 +20,14 @@ import BazarHistory from './Pages/ManagerPanel/BazarHistory/BazarHistory';
 import Profile from './Pages/Profile/Profile';
 import AddBazarDate from './Pages/ManagerPanel/AddBazarDate/AddBazarDate';
 import ShowBazarDates from './Pages/ManagerPanel/ShowBazarDates/ShowBazarDates';
+import { io } from "socket.io-client";
+import { useEffect, useState } from "react";
+import Notifications from './Pages/Notifications/Notifications';
+import EditPassword from './Pages/Profile/EditPassword';
 
 function App() {
+  
+
   return (
     <div>
       <BrowserRouter>
@@ -49,6 +55,14 @@ function App() {
             element={
               <PrivateRoute>
                 <Profile />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/notifications"
+            element={
+              <PrivateRoute>
+                <Notifications />
               </PrivateRoute>
             }
           />
@@ -153,6 +167,14 @@ function App() {
             element={
               <PrivateRoute>
                 <AddDepositM />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/editPassword/:userId"
+            element={
+              <PrivateRoute>
+                <EditPassword />
               </PrivateRoute>
             }
           />

@@ -26,6 +26,9 @@ const BazarHistory = () => {
         setCosts(cost);
         setOthers(other);
      }, [cost, other]);
+
+     
+     
     return (
       <div>
         <NavBar />
@@ -36,7 +39,7 @@ const BazarHistory = () => {
           <h3 className="mt-5">Bazar History</h3>
           <hr />
           <Row justify="center mt-5">
-            {cost.map((c) => {
+            {cost.sort((a,b) => (a.createdAt < b.createdAt) ?1 : -1).map((c) => {
               return (
                 <Col lg={12} sm={24} xs={24} className="p-2">
                   <div className="costHistory">
@@ -67,7 +70,7 @@ const BazarHistory = () => {
           <h3 className="mt-5">Other Cost History</h3>
           <hr />
           <Row justify="center mt-5">
-            {other.map((c) => {
+            {other.sort((a, b) => (a.createdAt < b.createdAt) ? 1 : -1).map((c) => {
               return (
                 <Col lg={12} sm={24} xs={24} className="p-2">
                   <div className="costHistory">

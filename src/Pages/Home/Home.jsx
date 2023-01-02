@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import NavBar from '../../Components/NavBar/NavBar';
@@ -8,6 +8,7 @@ import { getAllOthers } from '../../Redux/Actions/otherActions';
 import AllMemberInfo from '../AllMemberInfo/AllMemberInfo';
 import MessDetails from '../MessDetails/MessDetails';
 import PersonalInfo from '../PersonalInfo/PersonalInfo';
+import ReactToPrint, { useReactToPrint } from 'react-to-print';
 
 const Home = () => {
   const { member } = useSelector((state) => state.memberReducer);
@@ -20,6 +21,14 @@ const Home = () => {
   const [totalMember, setTotalMember] = React.useState([]);
 
   const dispatch = useDispatch();
+
+  const componentRef = useRef();
+  const handlePrint = useReactToPrint({
+    content: () => componentRef.current,
+    documentTitle: "kureghor",
+    onAfterPrint: () => alert("print successfull")
+
+  })
 
   React.useEffect(() => {
     dispatch(getAllMembers());
@@ -68,39 +77,46 @@ const user = JSON.parse(localStorage.getItem("user"));
   
 
     return (
-     <div>
-      {user ?  <div>
-        <NavBar />
-        <MessDetails
-          mealRate={mealRate}
-          otherCostPerson={otherCostPerson}
-          otherCost={otherCost}
-          messBalance={messBalance}
-          totalDeposit={totalDeposit}
-          totalMeal={totalMeal}
-          totalMealCost={totalMealCost}
-        />
-        <PersonalInfo
-          totalMember={totalMember}
-          mealRate={mealRate}
-          otherCostPerson={otherCostPerson}
-        />
-        <AllMemberInfo
-          mealRate={mealRate}
-          otherCostPerson={otherCostPerson}
-          otherCost={otherCost}
-          messBalance={messBalance}
-          totalDeposit={totalDeposit}
-          totalMeal={totalMeal}
-          totalMealCost={totalMealCost}
-          totalMember={totalMember}
-          loading={loading}
-        />
-      </div> : <div>
-        <h2>Login Please</h2>
-        <Link to="/login">Login Now</Link>
-        </div>}
-     </div>
+      <div>
+        {user ? (
+          <div>
+            <NavBar />
+            <div ref={componentRef}>
+              <MessDetails
+                mealRate={mealRate}
+                otherCostPerson={otherCostPerson}
+                otherCost={otherCost}
+                messBalance={messBalance}
+                totalDeposit={totalDeposit}
+                totalMeal={totalMeal}
+                totalMealCost={totalMealCost}
+              />
+              <PersonalInfo
+                totalMember={totalMember}
+                mealRate={mealRate}
+                otherCostPerson={otherCostPerson}
+              />
+              <AllMemberInfo
+                mealRate={mealRate}
+                otherCostPerson={otherCostPerson}
+                otherCost={otherCost}
+                messBalance={messBalance}
+                totalDeposit={totalDeposit}
+                totalMeal={totalMeal}
+                totalMealCost={totalMealCost}
+                totalMember={totalMember}
+                loading={loading}
+              />
+            </div>
+            <button onClick={handlePrint}>Print</button>
+          </div>
+        ) : (
+          <div>
+            <h2>Login Please</h2>
+            <Link to="/login">Login Now</Link>
+          </div>
+        )}
+      </div>
     );
 };
 
