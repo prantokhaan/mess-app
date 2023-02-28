@@ -37,10 +37,14 @@
   border: none;
   padding: 10px 15px;
   cursor: pointer;
-  color: #003580;
+  color: white;
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   border-radius: 20px;
+  background: #001D3D;
+box-shadow: inset 5px 5px 16px #000c18,
+            inset -5px -5px 16px #002e62;
+  border: 2px solid white;
 }
 
 
@@ -193,18 +197,22 @@ box-shadow: inset 5px 5px 23px #666666,
   margin: 20px 20px 0 20px;
   padding: 10px 15px;
   font-family: 'Poppins', sans-serif;
-  background-color: #003580;
-  border: 2px solid #003580;
+  background: #e0e0e0;
+box-shadow: inset 5px 5px 10px #5a5a5a,
+            inset -5px -5px 10px #ffffff;
+  border: none;
   color: white;
   border-radius: 10px;
   transition: all 0.5s ease;
+  color: black;
 
 }
 
 .manNavButton:hover{
-  border: 2px solid #003580;
-  background-color: transparent;
-  color: #003580;
+ background: #ffffff;
+box-shadow: inset 5px 5px 32px #666666,
+            inset -5px -5px 32px #ffffff;
+  color: #001d3d;
 }
 
 /* Deposit Section  */
@@ -324,22 +332,28 @@ box-shadow: inset 5px 5px 23px #666666,
 /* Cost  */
 
 .costHistory{
-  background-color: #131001;
-  box-shadow: 0px 0px 8px 2px rgb(73, 67, 67);
+  background: #ffffff;
+box-shadow: inset 5px 5px 23px #666666,
+            inset -5px -5px 23px #ffffff;
   border-radius: 20px;
   padding: 15px;
-  color: white;
+  color: black;
+  padding: 20px 0;
+  font-family: 'Poppins', sans-serif !important;
+
+  
 }
 
 .delButton{
-  background-color : orange !important;
-  color: black !important;
+  background-color : rgb(83, 3, 3) !important;
+  color: white !important;
   padding: 5px 15px !important;
   outline: none !important;
   border-radius: 10px;
   box-shadow: 0 0 2px 2px rgb(77, 67, 67) !important;
   transition: all 0.5s ease;
-  font-weight: bold;
+  border: none;
+  font-family: 'Poppins', sans-serif !important;
 }
 .delButton:hover{
   color: black !important;
@@ -348,11 +362,14 @@ box-shadow: inset 5px 5px 23px #666666,
 
 /* Bazar Dates  */
 .bazarHistory{
-  background-color: #023047;
-  box-shadow: 0px 0px 8px 2px rgb(73, 67, 67);
+  background: #ffffff;
+box-shadow: inset 5px 5px 23px #666666,
+            inset -5px -5px 23px #ffffff;
   border-radius: 20px;
   padding: 15px;
-  color: white;
+  color: black;
+  padding: 20px 0;
+  font-family: 'Poppins', sans-serif !important;
 }
 
 /* Responsive  */
@@ -383,6 +400,11 @@ box-shadow: inset 5px 5px 23px #666666,
   font-size: 14px;
   padding: 5px 10px;
   margin-left: 10px;
+  background: #001D3D;
+box-shadow: inset 5px 5px 16px #000c18,
+            inset -5px -5px 16px #002e62;
+  border: 2px solid limegreen;
+
 }
 .infoDetailItem{
   padding: 25px;

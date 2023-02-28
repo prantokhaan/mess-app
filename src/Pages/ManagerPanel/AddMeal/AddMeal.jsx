@@ -39,7 +39,18 @@ const AddMeal = () => {
     const data3 = "2 Meal Added to your Account";
     const data4 = "Your meal number has edited to " + members?.meal;
     var status = "unseen";
+    
     console.log(data2);
+
+     function sendNot(values) {
+       dispatch(addNot(values));
+     }
+     function sendTwoNot(values) {
+       dispatch(addNot(values));
+     }
+     function sendCustomNot(values) {
+       dispatch(addNot(values));
+     }
     
 
     function oneMeal(values) {
@@ -49,6 +60,7 @@ const AddMeal = () => {
 
 
       dispatch(editMember(values));
+      
     }
     function twoMeal(values) {
       values._id = members._id;
@@ -64,15 +76,7 @@ const AddMeal = () => {
       console.log(values);
     }
 
-    function sendNot(values){
-      dispatch(addNot(values));
-    }
-    function sendTwoNot(values){
-      dispatch(addNot(values));
-    }
-    function sendCustomNot(values){
-      dispatch(addNot(values));
-    }
+   
 
     let time = new Date();
     console.log(time);

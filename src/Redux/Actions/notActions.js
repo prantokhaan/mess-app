@@ -42,7 +42,6 @@ export const editNot = (reqObj) => async (dispatch) => {
     dispatch({ type: "LOADING", payload: false });
     message.success("Notification Updated successfully");
     setTimeout(() => {
-      window.location.href = "/";
     }, 500);
   } catch (error) {
     console.log(error);

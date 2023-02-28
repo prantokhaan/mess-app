@@ -4,7 +4,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import NavBar from '../../Components/NavBar/NavBar';
 import Spinner from '../../Components/Spinner/Spinner';
-import { editNot, getAllNots } from '../../Redux/Actions/notActions';
+import { deleteNot, editNot, getAllNots } from '../../Redux/Actions/notActions';
 
 const Notifications = () => {
     const user = JSON.parse(localStorage.getItem("user"));
@@ -54,6 +54,8 @@ const Notifications = () => {
          
          
       };
+
+      
       console.log(nice[0]);
     return (
       <div>
@@ -89,6 +91,14 @@ const Notifications = () => {
                         </h5>
                         <hr className="w-50 mx-auto" />
                         <h5 className="text-capitalize">{c.name}</h5>
+                        <button
+                          className="delButton mt-2"
+                          onClick={() => {
+                            dispatch(deleteNot({ notId: c._id }));
+                          }}
+                        >
+                          Delete
+                        </button>
                       </div>
                     </Col>
                   );

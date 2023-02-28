@@ -28,7 +28,7 @@ const Personal = (props) => {
             <h2 className="infoStat">{meal}</h2>
             <h3 className="infoName">My Meal</h3>
           </div>
-          <div className="infoDetailItem2">
+          <div className="infoDetailItem">
             <span className="infoIcon">
               <FontAwesomeIcon icon={faSackDollar} />
             </span>
@@ -43,7 +43,7 @@ const Personal = (props) => {
             <h3 className="infoName">My Cost</h3>
           </div>
           {balance > 0 ? (
-            <div className="infoDetailItem2">
+            <div className="infoDetailItem">
               <span className="infoIcon">
                 <FontAwesomeIcon icon={faScaleUnbalancedFlip} />
               </span>
@@ -51,7 +51,7 @@ const Personal = (props) => {
               <h3 className="infoName">My Balance</h3>
             </div>
           ) : (
-            <div className="infoDetailItem2">
+            <div className="infoDetailItem">
               <span className="infoIcon2">
                 <FontAwesomeIcon icon={faScaleUnbalanced} />
               </span>
